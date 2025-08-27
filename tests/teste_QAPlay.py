@@ -22,23 +22,25 @@ options.add_argument('--proxy-server=')
 # Depois finaliza a compra clicando em "Total"
 # Após isso irá abrir o campo para digitar o nome e email para que seja eviado o link de pagamento
 
-driver=webdriver.Chrome(options=options)
-driver.get("https://coffee-cart.app/")
 
-time.sleep (2)
+def compra_cafe():
+    driver=webdriver.Chrome(options=options)
+    driver.get("https://coffee-cart.app/")
 
-driver.find_element(By.XPATH, '//*[@id="app"]/div[2]/ul/li[1]').click()
+    time.sleep (2)
 
-time.sleep (2)
+    driver.find_element(By.XPATH, '//*[@id="app"]/div[2]/ul/li[1]').click()
 
-driver.find_element(By.XPATH, '//*[@id="app"]/ul/li[2]/a').click()
+    time.sleep (2)
 
-time.sleep (2)
+    driver.find_element(By.XPATH, '//*[@id="app"]/ul/li[2]/a').click()
 
-driver.find_element(By.XPATH, '//*[@id="app"]/div[2]/div/div[1]/button').click()
+    time.sleep (2)
 
-time.sleep (2)
+    driver.find_element(By.XPATH, '//*[@id="app"]/div[2]/div/div[1]/button').click()
 
-driver.find_element(By.ID, 'name').send_keys("Paulo")
+    time.sleep (2)
 
-time.sleep (2)
+    driver.find_element(By.ID, 'name').send_keys("Paulo")
+
+    time.sleep (2)
